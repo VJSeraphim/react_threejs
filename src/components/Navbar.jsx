@@ -30,11 +30,8 @@ const Navbar = () => {
             alt="logo"
             className="w-9 h-9 object-contain"
           />
-          <p className="text-white font-bold cursor-pointer text-[18px]">
-            VJS
-            <span className="sm:block hidden">
-              | React + Javascript
-            </span>
+          <p className="text-white font-bold cursor-pointer flex text-[18px]">
+            VJS &nbsp; <span className="sm:block hidden">| React + Javascript</span>
           </p>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">
@@ -63,21 +60,21 @@ const Navbar = () => {
           />
           <div className={`${!toggle ? 'hidden' : 'flex'} p-6 black-gradient top-20 right-0 mx-4 my-2 min-w-[140px] absolute z-10 rounded-xl`}>
             <ul className="list-none flex justify-end flex-col gap-4">
-            {navLinks.map((link) => (
-              <li
-                key={link.id}
-                className={`${
-                  active === link.title
-                  ? "text-white"
-                  : "text-secondary"
-                } font-poppins font-medium cursor-pointer text-[16px]`}
-                onClick={() => setActive(link.title)}
-              >
-                <a href={`#${link.id}`}>
-                  setToggle(!toggle)
-                  {link.title}
-                </a>
-              </li>
+              {navLinks.map((link) => (
+                <li
+                  key={link.id}
+                  className={`${
+                    active === link.title
+                    ? "text-white"
+                    : "text-secondary"
+                  } font-poppins font-medium cursor-pointer text-[16px]`}
+                  onClick={() => setActive(link.title)}
+                >
+                  <a href={`#${link.id}`}>
+                    setToggle(!toggle)
+                    {link.title}
+                  </a>
+                </li>
               ))}
             </ul>
           </div>
